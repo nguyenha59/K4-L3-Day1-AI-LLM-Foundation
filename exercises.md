@@ -15,17 +15,10 @@ Gọi `call_openai` với temperature 0.0, 0.5, 1.0 và 1.5 dùng prompt
 **"Hãy kể cho tôi một sự thật thú vị về Việt Nam."**
 
 **Bạn nhận thấy quy luật gì qua bốn phản hồi?** (2–3 câu)
-> Chạy `call_openai` với prompt trên ở cả 4 mức, model đều chọn kể về hang Sơn
-> Đoòng (Phong Nha - Kẻ Bàng) chứ không đổi chủ đề, nhưng chi tiết thì vênh
-> nhau ngay cả ở temperature = 0.0: bản 0.0 và 1.0 nói hang "dài hơn 5 km" và
-> không nêu tên ai phát hiện, còn bản 0.5 và 1.5 lại nói "dài khoảng 9 km".
-> Riêng bản 1.5 thêm hẳn tên người phát hiện (Hồ Khanh, năm 1991) và tên tổ
-> chức khảo sát (Hiệp hội Hang động Hoàng gia Anh), câu cũng dài và bay bổng
-> hơn hẳn 3 bản còn lại (thêm cả chi tiết "có cả đám mây riêng trong hang").
-> Tóm lại temperature không chỉ đổi văn phong (ngắn gọn khô khan ở 0.0 dần
-> thành kể chuyện chi tiết ở 1.5) mà số liệu cụ thể (số km) cũng không cố định
-> theo temperature, kể cả để 0.0 cũng không đảm bảo model trả lời giống nhau
-> giữa các lần gọi hay đúng tuyệt đối.
+> Cả 4 lần đều kể về hang Sơn Đoòng nhưng số liệu lệch nhau: chỗ nói hang dài
+> hơn 5 km, chỗ lại nói khoảng 9 km, kể cả ở temperature 0 cũng không chắc
+> đúng. Temperature càng cao câu trả lời càng dài, model thêm tên người, tên
+> tổ chức nghe hoành tráng hơn nhưng không đồng nghĩa với chính xác hơn.
 
 ### Câu 1.2 — Chọn temperature cho sản phẩm
 **Bạn sẽ đặt temperature bao nhiêu cho chatbot hỗ trợ khách hàng, và tại sao?**
